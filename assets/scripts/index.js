@@ -13,14 +13,16 @@ form.addEventListener('submit', (event)=>{
     const {currentTarget:{children:{input}}} = event;
 
     if(regexpValidation.test(input.value)){
-        input.classList.toggle('defaultInputState');
-        input.classList.toggle('invalidInputState');
-        console.log('vavid');
+        input.classList.add('validInputState');
     }
     else{
-        input.classList.toggle('defaultInputState');
-        input.classList.toggle('validInputState');
-        console.log('Not vavid');
+        input.classList.add('invalidInputState');
     }
-    
+});
+
+
+input.addEventListener('change', (event)=>{
+    const {currentTarget:{classList}} = event;
+
+    classList.remove('validInputState', 'invalidInputState');
 });
