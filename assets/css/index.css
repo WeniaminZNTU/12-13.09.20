@@ -1,0 +1,11 @@
+.invalidInputState{
+    border: 1px solid red;
+}
+
+.validInputState{
+    border: 2px solid green;
+}
+
+.defaultInputState{
+    border: 1px solid black;    
+}
